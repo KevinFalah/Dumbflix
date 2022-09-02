@@ -5,6 +5,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Home from './pages/Home'
 import TvShows from './pages/TvShows';
 import Movie from './pages/Movie';
+import Detail from './pages/Detail';
 
 function App() {
   return (
@@ -26,6 +27,12 @@ function App() {
       <Route path='/movies' element={
         <Layout>
           <Movie />
+        </Layout>
+      }/>
+
+      <Route path='/detail' element={
+        <Layout>
+          <Detail />
         </Layout>
       }/>
   </Routes>

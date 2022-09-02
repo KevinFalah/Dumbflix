@@ -69,3 +69,8 @@
   color:  rgb(255, 58, 94);
   cursor: pointer;
 }
+
+.dropDivid {
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
