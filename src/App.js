@@ -5,7 +5,9 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Home from './pages/Home'
 import TvShows from './pages/TvShows';
 import Movie from './pages/Movie';
-import Detail from './pages/Detail';
+import VideoDetail from './pages/VideoDetail'
+import Profile from './pages/Profile';
+import Payment from './pages/Payment';
 
 function App() {
   return (
@@ -30,9 +32,21 @@ function App() {
         </Layout>
       }/>
 
-      <Route path='/detail' element={
+      <Route path='/video' element={
         <Layout>
-          <Detail />
+          <VideoDetail />
+        </Layout>
+      }/>
+
+      <Route path='/profile' element={
+        <Layout>
+          <Profile />
+        </Layout>
+      }/>
+
+      <Route path='/payment' element={
+        <Layout>
+          <Payment />
         </Layout>
       }/>
   </Routes>

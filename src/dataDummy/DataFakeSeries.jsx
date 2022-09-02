@@ -6,32 +6,38 @@ import youSeries from '../Images/you.png'
             {
                 seriesImg: youSeries,
                 title:"You",
-                year: 2022
+                year: 2022,
+                type: "Series"
             },
             {
                 seriesImg: youSeries,
                 title:"You",
-                year: 2022
+                year: 2022,
+                type: "Series"
             },
             {
                 seriesImg: youSeries,
                 title:"You",
-                year: 2022
+                year: 2022,
+                type: "Series"
             },
             {
                 seriesImg: youSeries,
                 title:"You",
-                year: 2022
+                year: 2022,
+                type: "Series"
             },
             {
                 seriesImg: youSeries,
                 title:"You",
-                year: 2022
+                year: 2022,
+                type: "Series"
             },
             {
                 seriesImg: youSeries,
                 title:"You",
-                year: 2022
+                year: 2022,
+                type: "Series"
             }
         ]
     

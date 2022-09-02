@@ -4,7 +4,7 @@ import "../App.css";
 import { useState } from "react";
 import ModalRegister from "./ModalRegister";
 import { Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import userPhoto from "../Images/user.png";
 import { Dropdown } from "react-bootstrap";
@@ -21,9 +21,19 @@ function Navbar() {
 
   const [isLogin, setIsLogin] = useState(false);
 
+  const navigate = useNavigate()
+
+  const handleLogout = () => {
+    localStorage.removeItem("user")
+    navigate('/')
+  }
+
   useEffect(() => {
     if (user) setIsLogin(true);
-  }, [user]);
+    else setIsLogin(false)
+  }, [user, handleLogout]);
+  
+
 
   return (
     <nav className="navbar navbar-expand-lg bg-dark shadow sticky-top">
@@ -40,7 +50,7 @@ function Navbar() {
           <span className="navbar-toggler-icon" />
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0 flex-grow-1">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0 navbarUl">
             <li className="nav-item">
               <Link
                 className="nav-link active text-light"
@@ -62,7 +72,9 @@ function Navbar() {
             </li>
           </ul>
           <div className="flex-grow-1 d-none d-sm-block">
-            <img src={Logo} alt="Dumbflix" />
+            <Link to='/'>
+              <img src={Logo} alt="Dumbflix" />
+            </Link>
           </div>
           <div>
             {isLogin ? (
@@ -72,12 +84,17 @@ function Navbar() {
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu variant="dark">
-                  <Dropdown.Item href="#/action-1"><FaUser className="text-danger ms-2" /> Profile</Dropdown.Item>
-                  <Dropdown.Item href="#/action-2">
+                    <Dropdown.Item as={Link} to='/profile'>
+                    <FaUser className="text-danger ms-2" /> 
+                    Profile
+                    </Dropdown.Item>
+
+
+                  <Dropdown.Item as={Link} to='/payment'>
                    <FaMoneyCheckAlt className="text-danger ms-2"/> Pay
                   </Dropdown.Item>
                   <Dropdown.Divider className="bg-light dropDivid"  />
-                  <Dropdown.Item href="#/action-3">
+                  <Dropdown.Item href="#" onClick={handleLogout}>
                   <FaSignOutAlt className="text-danger ms-2" />   Logout
                   </Dropdown.Item>
                 </Dropdown.Menu>

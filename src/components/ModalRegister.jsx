@@ -6,7 +6,7 @@ import Modal from 'react-bootstrap/Modal';
 const initialUser = {
   email: "",
   password: "",
-  fulllName: "",
+  fullname: "",
   gender: "",
   phone: "",
   address: ""
@@ -25,7 +25,7 @@ function ModalRegister( {handleClose, show} ) {
     const handleChange = (e) => {
       setUserData((previousState) => ({
         ...previousState,
-        [e.target.name]: e.target.value,
+        [e.target.name]: e.target.value
       }))
     }
 
@@ -84,15 +84,18 @@ function ModalRegister( {handleClose, show} ) {
               </Form.Group>
 
               {/* Gender */}
-            <Form.Group className="mb-3" controlId="gender"> 
-              <Form.Control
+              <Form.Select
                 type="text"
                 placeholder="Gender"
                 className="mb-3 bg-secondary text-white formModal"
                 name="gender"
                 onChange={handleChange}
-              />
-              </Form.Group>
+              >
+
+                <option disabled selected>Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+              </Form.Select>
                 
               {/* Phone */}
               <Form.Group className="mb-3" controlId="phone"> 

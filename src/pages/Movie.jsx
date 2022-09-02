@@ -8,9 +8,9 @@ const Movie = () => {
       <div>
         <div className="background-hero-movie container-fluid mx-auto">
           <div className="hero ms-5 text-light d-flex flex-column align-content-center justify-content-center">
-          <h1 className='text-size text-start'>FURY</h1>
+          <h1 className='text-size text-start'>GoodFellas</h1>
             <p className="">
-            In April 1945, the Allies are making their final push in the European theater. A battle-hardened Army sergeant named Don "Wardaddy" Collier.
+            A young man grows up in the mob and works very hard to advance himself through the ranks. He enjoys his life of money and luxury, but is oblivious to the horror that he causes. A drug addiction and a few mistakes ultimately unravel his climb to the top.
             </p>
             <div className="mb-4">
               <span>2019</span>

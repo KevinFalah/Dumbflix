@@ -1,5 +1,4 @@
 import React from 'react'
-import bgHero from '../Images/bg1.png'
 import MovieContainer from '../components/MovieContainer'
 import SeriesContainer from '../components/SeriesContainer'
 
@@ -9,10 +8,10 @@ function Home() {
     <div>
       <div className='background-hero-home container-fluid mx-auto'>
         <div className='hero ms-5 text-light d-flex flex-column align-content-center justify-content-center'>
-            <h1 className='text-size text-start'>THE WITCHER</h1>
-            <p className=''>Geralt of Rivia, a solitary monster hunter, who struggles to find his place in a world where people often prove more wicked than monsters and beasts.</p>
+            <h1 className='text-size text-start'>PEAKY BLINDERS</h1>
+            <p className=''>Peaky Blinders is an epic centred on a crime family of mixed Irish Catholic and Romani origins based in Birmingham, England, starting in 1919, several months after the end of the First World War in November 1918.</p>
             <div className='mb-4'>
-              <span>2019</span> 
+              <span>2013</span> 
               <button className='btn btn-outline-light ms-2 py-1 tv-s shadow'>TV Series</button>
             </div>
             <div>
