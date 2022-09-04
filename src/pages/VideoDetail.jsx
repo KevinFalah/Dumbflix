@@ -15,7 +15,6 @@ function VideoDetail() {
     if(user) setIsLogin(true)
     else {
       setIsLogin(false)
-      alert('Silahkan Sign In')
       navigate('/')
     }
   }, [user])

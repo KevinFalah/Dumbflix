@@ -6,40 +6,6 @@ import {useState} from 'react';
 import data from '../dataDummy/DataFakeSeries.jsx'
 
 function SeriesContainer() {
-    // const [seriesList, setSeriesList] = useState(
-    //     [
-    //         {
-    //             seriesImg: youSeries,
-    //             title:"You",
-    //             year: 2022
-    //         },
-    //         {
-    //             seriesImg: youSeries,
-    //             title:"You",
-    //             year: 2022
-    //         },
-    //         {
-    //             seriesImg: youSeries,
-    //             title:"You",
-    //             year: 2022
-    //         },
-    //         {
-    //             seriesImg: youSeries,
-    //             title:"You",
-    //             year: 2022
-    //         },
-    //         {
-    //             seriesImg: youSeries,
-    //             title:"You",
-    //             year: 2022
-    //         },
-    //         {
-    //             seriesImg: youSeries,
-    //             title:"You",
-    //             year: 2022
-    //         }
-    //     ]
-    // )
 
 
   return (
