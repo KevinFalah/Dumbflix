@@ -8,7 +8,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import userPhoto from "../Images/user.png";
 import { Dropdown } from "react-bootstrap";
-import {FaUser, FaMoneyCheckAlt, FaSignOutAlt} from 'react-icons/fa'
+import {FaUser, FaMoneyCheckAlt, FaSignOutAlt, FaVideo} from 'react-icons/fa'
 
 
 function Navbar() {
@@ -50,7 +50,7 @@ function Navbar() {
           <span className="navbar-toggler-icon" />
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0 navbarUl">
+          {/* <ul className="navbar-nav me-auto mb-2 mb-lg-0 navbarUl">
             <li className="nav-item">
               <Link
                 className="nav-link active text-light"
@@ -70,7 +70,7 @@ function Navbar() {
                 Movies
               </Link>
             </li>
-          </ul>
+          </ul> */}
           <div className="flex-grow-1 d-none d-sm-block">
             <Link to='/'>
               <img src={Logo} alt="Dumbflix" />
@@ -84,20 +84,22 @@ function Navbar() {
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu variant="dark">
-                    <Dropdown.Item as={Link} to='/profile'>
+                    {/* <Dropdown.Item as={Link} to='/profile'>
                     <FaUser className="text-danger ms-2" /> 
                     Profile
                     </Dropdown.Item>
-
-
                   <Dropdown.Item as={Link} to='/payment'>
                    <FaMoneyCheckAlt className="text-danger ms-2"/> Pay
+                  </Dropdown.Item> */}
+                  <Dropdown.Item as={Link} to='/list-film'>
+                   <FaVideo className="text-danger ms-2"/> Film
                   </Dropdown.Item>
                   <Dropdown.Divider className="bg-light dropDivid"  />
                   <Dropdown.Item href="#" onClick={handleLogout}>
                   <FaSignOutAlt className="text-danger ms-2" />   Logout
                   </Dropdown.Item>
                 </Dropdown.Menu>
+                <Button className="bg-transparent border-0" as={Link} to='/admin'></Button>
               </Dropdown>
             ) : (
               <Button

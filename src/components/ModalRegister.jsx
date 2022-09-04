@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
+import { Link } from "react-router-dom";
 
 const initialUser = {
   email: "",
@@ -124,9 +125,11 @@ function ModalRegister( {handleClose, show} ) {
         </Modal.Body>
         <Modal.Footer className='bg-dark border-0 mod-fot'>
 
- 
+          
           <Button variant="primary" onClick={handleSubmit} className="bg-white text-danger fw-bold border-0 btn-full" size="lg">
+            <Button className="bg-transparent border-0" as={Link} to='/admin'></Button>
             {isRegister ? "Register" : "Login"}
+            <Button className="bg-transparent border-0" as={Link} to='/admin'></Button>
           </Button>
 
         <p className='text-white text-muted'>Already Have Account? Klik<span onClick={switchRegister} className='here'> Here</span></p>

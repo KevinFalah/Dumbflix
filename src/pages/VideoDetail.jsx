@@ -2,7 +2,8 @@ import React, { useEffect,useState } from "react";
 import dummyPeaky from '../Images/peakyblindersCard.jfif'
 import episode from '../Images/episode1-peaky.jfif'
 import { Card } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { Button } from "react-bootstrap";
 
 function VideoDetail() {
 
@@ -34,7 +35,11 @@ function VideoDetail() {
         ></iframe>
       </div>
 
-    <div className="d-flex justify-content-start sectionMain mt-5 flex-column flex-md-row">
+      <div style={{marginLeft: "920px", marginTop: "15px"}}>
+        <Button className="btn bg-danger text-white border-0 px-5" as={Link} to='/add-episode'>Add Episode</Button>
+      </div>
+
+    <div className="d-flex justify-content-start sectionMain mt-3 flex-column flex-md-row">
       <div className="card mb-3 bg-black text-white" style={{ maxWidth: "540px" }}>
         <div className="row g-0">
           <div className="col-md-4">

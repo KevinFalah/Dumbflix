@@ -8,6 +8,10 @@ import Movie from './pages/Movie';
 import VideoDetail from './pages/VideoDetail'
 import Profile from './pages/Profile';
 import Payment from './pages/Payment';
+import IncomingTransaction from './pages/IncomingTransaction';
+import ListFilm from './components/AddMovie/ListFilm';
+import AddFilm from './components/AddMovie/AddFilm'
+import AddEpisode from './components/AddEpisode/AddEpisode';
 
 function App() {
   return (
@@ -38,7 +42,7 @@ function App() {
         </Layout>
       }/>
 
-      <Route path='/profile' element={
+      {/* <Route path='/profile' element={
         <Layout>
           <Profile />
         </Layout>
@@ -48,7 +52,29 @@ function App() {
         <Layout>
           <Payment />
         </Layout>
+      }/> */}
+
+      <Route path='/admin' element={
+        <Layout>
+          <IncomingTransaction />
+        </Layout>
       }/>
+      <Route path='/list-film' element={
+        <Layout>
+          <ListFilm />
+        </Layout>
+      } />
+      <Route path='/add-film' element={
+        <Layout>
+          <AddFilm />
+        </Layout>
+      } />
+      <Route path='/add-episode' element={
+        <Layout>
+          <AddEpisode />
+        </Layout>
+      } />
+      
   </Routes>
   </BrowserRouter>
   );
