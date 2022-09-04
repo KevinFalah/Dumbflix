@@ -17,7 +17,7 @@ function VideoDetail() {
     else {
       setIsLogin(false)
       alert('Silahkan Sign In')
-      navigate('/')
+      return navigate('/')
     }
   }, [user])
 
@@ -29,14 +29,10 @@ function VideoDetail() {
           height="500"
           src="https://www.youtube.com/embed/2nsT9uQPIrk?controls=0"
           title="Peaky Blinders"
-          frameborder="0"
+          frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
+          allowFullScreen
         ></iframe>
-      </div>
-
-      <div style={{marginLeft: "920px", marginTop: "15px"}}>
-        <Button className="btn bg-danger text-white border-0 px-5" as={Link} to='/add-episode'>Add Episode</Button>
       </div>
 
     <div className="d-flex justify-content-start sectionMain mt-3 flex-column flex-md-row">
@@ -61,6 +57,9 @@ function VideoDetail() {
       </div>
 
       <div className="cardEpisode">
+        <div className="d-flex justify-content-end">
+          <Button className="btn bg-danger text-white border-0 px-5 mt-2 mb-4" as={Link} to='/add-episode'>Add Episode</Button>
+        </div>
         <img src={episode} alt="episode" className="imgEpisode" />
         <small className="text-light">Peaky Blinders : Episode 1</small>
       </div>

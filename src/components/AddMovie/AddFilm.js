@@ -4,9 +4,10 @@ import { faPaperclip, faPlus } from '@fortawesome/free-solid-svg-icons';
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { styles } from './Styles';
+import  {useState} from 'react'
 
 const AddFilm = () => {
-	const [ rates, setRates ] = React.useState([
+	const [ rates, setRates ] = useState([
 		{ titleEpisode: '', attachThumbnail: '', linkFilm: '' }
 	]);
 
