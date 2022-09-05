@@ -6,8 +6,6 @@ import Home from './pages/Home'
 import TvShows from './pages/TvShows';
 import Movie from './pages/Movie';
 import VideoDetail from './pages/VideoDetail'
-import Profile from './pages/Profile';
-import Payment from './pages/Payment';
 import IncomingTransaction from './pages/IncomingTransaction';
 import ListFilm from './components/AddMovie/ListFilm';
 import AddFilm from './components/AddMovie/AddFilm'
