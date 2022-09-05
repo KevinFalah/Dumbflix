@@ -6,40 +6,6 @@ import dataMovies from '../dataDummy/DataFakeMovies'
 console.log(dataMovies)
 
 function MovieContainer() {
-    // const [movieList, setMovieList] = useState(
-    //     [
-    //         {
-    //             movieImg: dummyGodfather,
-    //             title:"The Godfather",
-    //             year: 2022
-    //         },
-    //         {
-    //             movieImg: dummyGodfather,
-    //             title:"The Godfather",
-    //             year: 2022
-    //         },
-    //         {
-    //             movieImg: dummyGodfather,
-    //             title:"The Godfather",
-    //             year: 2022
-    //         },
-    //         {
-    //             movieImg: dummyGodfather,
-    //             title:"The Godfather",
-    //             year: 2022
-    //         },
-    //         {
-    //             movieImg: dummyGodfather,
-    //             title:"The Godfather",
-    //             year: 2022
-    //         },
-    //         {
-    //             movieImg: dummyGodfather,
-    //             title:"The Godfather",
-    //             year: 2022
-    //         }
-    //     ]
-    // )
 
     
 
