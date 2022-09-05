@@ -28,182 +28,185 @@ const AddFilm = () => {
 	return (
 		<div>
 			<form onSubmit={handleSubmit} onChange={handleChange}>
-				{rates.map((row, index) => {
-					const titleEpisodeId = `title-${index}`,
-						attachThumbnailId = `attach-${index}`,
-						linkFilmId = `link-${index}`;
-
-					return (
-						<div key={index} style={styles.container}>
-							<h5>Add Film</h5>
-							<div className="form-group mb-2">
-								<div 
-									style={{
-									display: 'grid',
-									gridTemplateColumns: 'repeat(2, 1fr)',	
-									gridGap: '1rem'
-									}}>
+			<div style={styles.container}>
+				<h4>Add Film</h4>
+				<div className="form-group mb-2">
+					<div 
+						style={{
+						display: 'grid',
+						gridTemplateColumns: 'repeat(2, 1fr)',	
+						gridGap: '1rem'
+						}}>
 									
-									<input
-										type="text"
-										name={titleEpisodeId}
-										data-id={index}
-										id={titleEpisodeId}
-										className="titleFilm"
-										placeholder="Title"
-										style={styles.customInputTitle}
-									/>
-									<input
-										type="file"
-										name={attachThumbnailId}
-										data-id={index}
-										id={attachThumbnailId}
-										className="attachThumbnail"
-										style={styles.customInputFile}
-									/>
-									<button
-										className="btn-grey"
-										onClick={() => {
-											document
-												.getElementsByName(attachThumbnailId)[0]
-												.click();
-										}}
-										style={{
-											width: '40%',
-											height: '50px',
-											fontSize: '15px',
-											textAlign: 'left',
-											float: 'right',
-											justifySelf: 'right'
-										}}
-									>
-										Attach Thumbnail{' '}
-										<div
-											style={{
-												float: 'right',
-												display: 'inline',
-												fontSize: '20px'
-											}}
-										>
-											<FontAwesomeIcon icon={faPaperclip} />
-										</div>
-									</button>
-								</div>	
+						<input
+							type="text"
+							name= "titlefilm"
+							data-id=""
+							id="titlefilm"
+							className="titleFilm"
+							placeholder="Title"
+							style={styles.customInputTitle}
+						/>
+						<input
+							type="file"
+							name="attachfile"
+							data-id=""
+							id="attachfile"
+							className="attachThumbnail"
+							style={styles.customInputFile}
+						/>
+						<button
+							className="btn-grey"
+							onClick={() => {
+								document
+								.getElementsByName("attachfile")[0]
+								.click();
+							}}
+							style={{
+								width: '40%',
+								height: '50px',
+								fontSize: '15px',
+								textAlign: 'left',
+								float: 'right',
+								justifySelf: 'right'
+							}}
+							>
+							Attach Thumbnail{' '}
+							<div
+								style={{
+									float: 'right',
+									display: 'inline',
+									fontSize: '20px'
+								}}
+							>
+								<FontAwesomeIcon icon={faPaperclip} />
 							</div>
-							<div className="form-group mb-4">
-								<div>
-									<div className="form-group mb-2">
-										<input
-											type="text"
-											name={linkFilmId}
-											data-id={index}
-											id={linkFilmId}
-											className="linkFilm"
-											placeholder="Year"
-											style={styles.customInput}
-										/>
-									</div>
-									<div className="form-group mb-2">
-										<select name="list" id="list" style={styles.customInput}>
-											<option disabled selected>Category</option>
-											<option value="tvSeries">TV Series</option>
-											<option value="movie">Movie</option>
-										</select>
-									</div>
-									<div className="form-group mb-2">
-										<textarea style={styles.textarea} placeholder="Description" id="desc" name="desc" rows="4" cols="50">
-										</textarea>
-									</div>
-								</div>
-							</div>	
-							<div className="form-group mb-2">
-								<div
-									style={{
-										display: 'grid',
-										gridTemplateColumns: 'repeat(2, 1fr)',
-										gridGap: '1rem'
-									}}
-								>
-									<input
-										type="text"
-										name={titleEpisodeId}
-										data-id={index}
-										id={titleEpisodeId}
-										className="titleEpisode"
-										placeholder="Title Episode"
-										style={styles.customInputTitle}
-									/>
-									<input
-										type="file"
-										name={attachThumbnailId}
-										data-id={index}
-										id={attachThumbnailId}
-										className="attachThumbnail"
-										style={styles.customInputFile}
-									/>
-									<button
-										className="btn-grey"
-										onClick={() => {
-											document
-												.getElementsByName(attachThumbnailId)[0]
-												.click();
-										}}
-										style={{
-											width: '40%',
-											height: '50px',
-											fontSize: '15px',
-											textAlign: 'left',
-											float: 'right',
-											justifySelf: 'right'
-										}}
-									>
-										Attach Thumbnail{' '}
-										<div
-											style={{
-												float: 'right',
-												display: 'inline',
-												fontSize: '20px'
-											}}
-										>
-											<FontAwesomeIcon icon={faPaperclip} />
-										</div>
-									</button>
-								</div>
-							</div>
-							<div className="form-group mb-2">
+						</button>
+					</div>	
+				</div>
+				<div className="form-group mb-4">
+					<div>
+						<div className="form-group mb-2">
 								<input
 									type="text"
-									name={linkFilmId}
-									data-id={index}
-									id={linkFilmId}
+									name="linkfilm"
+									data-id=""
+									id="linkfilm"
 									className="linkFilm"
-									placeholder="Link Film"
+									placeholder="Year"
 									style={styles.customInput}
 								/>
-							</div>
-							<div className="form-group mb-2">
+						</div>
+						<div className="form-group mb-2">
+							<select name="list" id="list" style={styles.customInput}>
+								<option disabled selected>Category</option>
+								<option value="tvSeries">TV Series</option>
+								<option value="movie">Movie</option>
+							</select>
+						</div>
+						<div className="form-group mb-0">
+							<textarea style={styles.textarea} placeholder="Description" id="desc" name="desc" rows="4" cols="50">
+							</textarea>
+						</div>
+					</div>
+				</div>	
+			</div>
+
+			{rates.map((row, index) => {
+				const titleEpisodeId = `title-${index}`,
+					attachThumbnailId = `attach-${index}`,
+					linkFilmId = `link-${index}`;
+
+				return (
+					<div key={index} style={styles.container}>
+						<div className="form-group mb-2">
+							<div
+								style={{
+									display: 'grid',
+									gridTemplateColumns: 'repeat(2, 1fr)',
+									gridGap: '1rem'
+								}}
+							>
+								<input
+									type="text"
+									name={titleEpisodeId}
+									data-id={index}
+									id={titleEpisodeId}
+									className="titleEpisode"
+									placeholder="Title Episode"
+									style={styles.customInputTitle}
+								/>
+								<input
+									type="file"
+									name={attachThumbnailId}
+									data-id={index}
+									id={attachThumbnailId}
+									className="attachThumbnail"
+									style={styles.customInputFile}
+								/>
 								<button
 									className="btn-grey"
-									style={{
-										width: '100%',
-										height: '50px',
-										color: '#e50914',
-										backgroundColor: 'rgba(210, 210, 210, 0.25)',
-										border: "2px solid #d2d2d2"
+									onClick={() => {
+										document
+										.getElementsByName(attachThumbnailId)[0]
+										.click();
 									}}
-									onClick={addRate}
+									style={{
+										width: '40%',
+										height: '50px',
+										fontSize: '15px',
+										textAlign: 'left',
+										float: 'right',
+										justifySelf: 'right'
+									}}
 								>
-									<FontAwesomeIcon icon={faPlus} />
+									Attach Thumbnail{' '}
+									<div
+										style={{
+											float: 'right',
+											display: 'inline',
+											fontSize: '20px'
+										}}
+									>
+										<FontAwesomeIcon icon={faPaperclip} />
+									</div>
 								</button>
 							</div>
-							<div className='d-flex flex-end' style={{marginLeft: "920px"}}>
-								<Button className="btn bg-danger text-white border-0 btn-regis px-5" as={Link} to='/list-film'>Save</Button>
-							</div>
-						</div>	
-					);
-				})}
-			</form>
-		</div>
+						</div>
+						<div className="form-group mb-2">
+							<input
+								type="text"
+								name={linkFilmId}
+								data-id={index}
+								id={linkFilmId}
+								className="linkFilm"
+								placeholder="Link Film"
+								style={styles.customInput}
+							/>
+						</div>
+						<div className="form-group mb-2">
+							<button
+								className="btn-grey"
+								style={{
+									width: '100%',
+									height: '50px',
+									color: '#e50914',
+									backgroundColor: 'rgba(210, 210, 210, 0.25)',
+									border: "2px solid #d2d2d2"
+								}}
+								onClick={addRate}
+							>
+								<FontAwesomeIcon icon={faPlus} />
+							</button>
+						</div>
+					</div>	
+				);
+			})}
+			<div className='d-flex form-group mb-4 justify-content-between' style={{marginLeft: "1070px"}}>
+				<Button className="btn bg-danger text-white border-0 btn-regis px-5" as={Link} to='/list-film'>Save</Button>
+			</div>
+		</form>
+	</div>
 	);
 };
 

@@ -34,7 +34,7 @@ const AddEpisode = () => {
 
 						return (
 							<div key={index} style={styles.container}>
-								<h5>Add Episode</h5>
+								<h4>Add Episode</h4>
 								<div className="form-group mb-2">
 									<div
 										style={{
@@ -100,7 +100,7 @@ const AddEpisode = () => {
 										style={styles.customInput}
 									/>
 								</div>
-								<div className='d-flex flex-end' style={{marginLeft: "920px"}}>
+								<div className='d-flex flex-end' style={{marginLeft: "929px"}}>
 									<Button className="btn bg-danger text-white border-0 px-4" as={Link} to='/video'>Add Episode</Button>
 								</div>
 							</div>

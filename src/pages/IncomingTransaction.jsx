@@ -7,7 +7,7 @@ import DropdownAdm from "../components/DropdownAdm";
 const TablePage = ({}) => {
   return (
     <div className="transcation-container">
-        <h5 style={{marginBottom: '30px'}}>Incoming Transaction</h5>
+        <h4 style={{marginBottom: '30px'}}>Incoming Transaction</h4>
         <Table hover className="transcation-table">
             <thead>
                 <tr style={{color: "#E50914", background: "#1F1F1F"}}>

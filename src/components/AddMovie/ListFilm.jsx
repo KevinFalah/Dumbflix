@@ -16,6 +16,7 @@ function ListFilm() {
       <div className='d-flex gap-4'>
         <h4 className='text-white'>List Film</h4>
         <select value={category} onChange={(e) => setCategory(() => e.target.value)} className='bg-black text-white' name="list" id="list">
+          <option disabled selected >Category</option>
           <option>TV Series</option>
           <option>Movie</option>
         </select>
