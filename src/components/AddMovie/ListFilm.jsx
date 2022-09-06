@@ -12,7 +12,7 @@ function ListFilm() {
   console.log(category)
   return (
     <>
-    <div className='d-flex mt-4 px-5  justify-content-between'>
+    <div className='d-flex mt-4 mx-5 px-5 justify-content-between'>
       <div className='d-flex gap-4'>
         <h4 className='text-white'>List Film</h4>
         <select value={category} onChange={(e) => setCategory(() => e.target.value)} className='bg-black text-white' name="list" id="list">
