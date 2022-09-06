@@ -28,7 +28,7 @@ const AddFilm = () => {
 	return (
 		<div>
 			<form onSubmit={handleSubmit} onChange={handleChange}>
-			<div style={styles.container}>
+			<div style={styles.container} className="mt-4 mb-4">
 				<h4>Add Film</h4>
 				<div className="form-group mb-2">
 					<div 
@@ -118,7 +118,7 @@ const AddFilm = () => {
 					linkFilmId = `link-${index}`;
 
 				return (
-					<div key={index} style={styles.container}>
+					<div key={index} style={styles.container} className="mt-3">
 						<div className="form-group mb-2">
 							<div
 								style={{
@@ -184,7 +184,10 @@ const AddFilm = () => {
 								style={styles.customInput}
 							/>
 						</div>
-						<div className="form-group mb-2">
+					</div>	
+				);
+			})}
+			<div className="form-group mb-2" style={styles.container}>
 							<button
 								className="btn-grey"
 								style={{
@@ -199,9 +202,6 @@ const AddFilm = () => {
 								<FontAwesomeIcon icon={faPlus} />
 							</button>
 						</div>
-					</div>	
-				);
-			})}
 			<div className='d-flex form-group mb-4 justify-content-between' style={{marginLeft: "1070px"}}>
 				<Button className="btn bg-danger text-white border-0 btn-regis px-5" as={Link} to='/list-film'>Save</Button>
 			</div>

@@ -4,7 +4,7 @@ export const styles = {
     margin: "auto",
     color: "white",
     flexDirection: "column",
-    padding: "30px 150px",
+    padding: "0px 150px",
     fontSize: "15px",
   },
   customInput: {
