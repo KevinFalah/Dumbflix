@@ -1,13 +1,8 @@
-import logo from './logo.svg';
 import './App.css';
 import Layout from './widgets/Layout';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
-import Home from './pages/Home'
 import TvShows from './pages/TvShows';
-import Movie from './pages/Movie';
-import VideoDetail from './pages/VideoDetail'
-import Profile from './pages/Profile';
-import Payment from './pages/Payment';
+import {Home, Movie, VideoDetail, Profile, Payment, Notfound} from './pages'
 
 function App() {
   return (
@@ -47,6 +42,12 @@ function App() {
       <Route path='/payment' element={
         <Layout>
           <Payment />
+        </Layout>
+      }/>
+
+      <Route path='*' element={
+        <Layout>
+          <Notfound />
         </Layout>
       }/>
   </Routes>
