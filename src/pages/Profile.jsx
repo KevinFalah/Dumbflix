@@ -52,7 +52,7 @@ function Profile() {
 
   return (
     <Container>
-    <Row className="justify-content-center">
+    <Row className="justify-content-center mt-5 mb-3">
       <Col md={8}>
         <Card className="rounded shadow border-0 bg-dark text-white p-5">
           <div className="d-flex justify-content-between">
