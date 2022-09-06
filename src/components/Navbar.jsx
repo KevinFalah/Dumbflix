@@ -79,10 +79,11 @@ function Navbar() {
           <div>
             {isLogin ? (
               <Dropdown>
+                <Button className="bg-transparent border-0" as={Link} to='/admin'></Button>
                 <Dropdown.Toggle variant="dark" id="dropdown-basic">
                   <img src={userPhoto} width={40} alt="user" />
                 </Dropdown.Toggle>
-
+              
                 <Dropdown.Menu variant="dark">
                     {/* <Dropdown.Item as={Link} to='/profile'>
                     <FaUser className="text-danger ms-2" /> 
@@ -99,7 +100,7 @@ function Navbar() {
                   <FaSignOutAlt className="text-danger ms-2" />   Logout
                   </Dropdown.Item>
                 </Dropdown.Menu>
-                <Button className="bg-transparent border-0" as={Link} to='/admin'></Button>
+                
               </Dropdown>
             ) : (
               <Button
