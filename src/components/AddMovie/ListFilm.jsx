@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 function ListFilm() {
 
-  const [category, setCategory] = useState("TV Series")
+  const [category, setCategory] = useState("Category")
 
 
   console.log(category)
@@ -18,7 +18,7 @@ function ListFilm() {
         <select value={category} onChange={(e) => setCategory(() => e.target.value)} className='bg-black text-white' name="list" id="list">
           <option disabled selected >Category</option>
           <option>TV Series</option>
-          <option>Movie</option>
+          <option>Movies</option>
         </select>
       </div>
       <div>
@@ -27,7 +27,7 @@ function ListFilm() {
     </div>
     
     <div className='sectionSeries'>
-      {category == "TV Series" ? 
+      {category === "TV Series" ? 
       ( <SeriesContainer /> ):(<MovieContainer />)}
     </div>
       
