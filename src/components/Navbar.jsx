@@ -8,7 +8,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import userPhoto from "../Images/user.png";
 import { Dropdown } from "react-bootstrap";
-import {FaUser, FaMoneyCheckAlt, FaSignOutAlt} from 'react-icons/fa'
+import {FaUser, FaMoneyCheckAlt, FaSignOutAlt, FaVideo} from 'react-icons/fa'
 
 
 function Navbar() {
@@ -88,10 +88,11 @@ function Navbar() {
                     <FaUser className="text-danger ms-2" /> 
                     Profile
                     </Dropdown.Item>
-
-
                   <Dropdown.Item as={Link} to='/payment'>
                    <FaMoneyCheckAlt className="text-danger ms-2"/> Pay
+                  </Dropdown.Item>
+                  <Dropdown.Item as={Link} to='/list-film'>
+                   <FaVideo className="text-danger ms-2"/> Film
                   </Dropdown.Item>
                   <Dropdown.Divider className="bg-light dropDivid"  />
                   <Dropdown.Item href="#" onClick={handleLogout}>
