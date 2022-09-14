@@ -55,6 +55,9 @@ function VideoDetail() {
       </div>
 
       <div className="cardEpisode">
+        {/* <div className="d-flex justify-content-end">
+          <Button className="btn bg-danger text-white border-0 px-5 mt-2 mb-4" as={Link} to='/add-episode'>Add Episode</Button>
+        </div> */}
         <img src={episode} alt="episode" className="imgEpisode" />
         <small className="text-light">Peaky Blinders : Episode 1</small>
       </div>
