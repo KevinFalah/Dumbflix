@@ -1,83 +1,125 @@
-import './App.css';
-import Layout from './widgets/Layout';
-import {BrowserRouter, Routes, Route} from 'react-router-dom'
-import TvShows from './pages/TvShows';
-import {Home, Movie, VideoDetail, Profile, Payment, Notfound} from './pages'
-import ListFilm from './pages/ListFilm';
-import IncomingTransaction from './pages/IncomingTransaction'
-import AddFilm from './components/AddMovie/AddFilm'
-import AddEpisode from './components/AddEpisode/AddEpisode'
+import "./App.css";
+import Layout from "./widgets/Layout";
+import LayoutAdmin from "./widgets/layoutAdmin";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import TvShows from "./pages/TvShows";
+import {
+  Home,
+  Movie,
+  VideoDetail,
+  Profile,
+  Payment,
+  Notfound,
+  ListFilm,
+  IncomingTransaction,
+  AddFilm,
+  AddEpisode,
+} from "./pages";
 
 function App() {
   return (
-  <BrowserRouter>
-  <Routes>
-    <Route />
-      <Route path='/' element={
-        <Layout>
-          <Home />
-        </Layout>
-      } />
+    <BrowserRouter>
+      <Routes>
+        <Route />
+        <Route
+          path="/"
+          element={
+            <Layout>
+              <Home />
+            </Layout>
+          }
+        />
 
-      <Route path='/tvshows' element={
-        <Layout>
-          <TvShows />
-        </Layout>
-      }/>
+        <Route
+          path="/tvshows"
+          element={
+            <Layout>
+              <TvShows />
+            </Layout>
+          }
+        />
 
-      <Route path='/movies' element={
-        <Layout>
-          <Movie />
-        </Layout>
-      }/>
+        <Route
+          path="/movies"
+          element={
+            <Layout>
+              <Movie />
+            </Layout>
+          }
+        />
 
-      <Route path='/video' element={
-        <Layout>
-          <VideoDetail />
-        </Layout>
-      }/>
+        <Route
+          path="/video"
+          element={
+            <Layout>
+              <VideoDetail />
+            </Layout>
+          }
+        />
 
-      <Route path='/profile' element={
-        <Layout>
-          <Profile />
-        </Layout>
-      }/>
+        <Route
+          path="/profile"
+          element={
+            <Layout>
+              <Profile />
+            </Layout>
+          }
+        />
 
-      <Route path='/payment' element={
-        <Layout>
-          <Payment />
-        </Layout>
-      }/>
+        <Route
+          path="/payment"
+          element={
+            <Layout>
+              <Payment />
+            </Layout>
+          }
+        />
 
-      <Route path='*' element={
-        <Layout>
-          <Notfound />
-        </Layout>
-      }/>
+        <Route
+          path="/admin"
+          element={
+            <LayoutAdmin>
+              <IncomingTransaction />
+            </LayoutAdmin>
+          }
+        />
 
-      <Route path='/admin' element={
-        <Layout>
-          <IncomingTransaction />
-        </Layout>
-      }/>
+        <Route
+          path="/list-film"
+          element={
+            <LayoutAdmin>
+              <ListFilm />
+            </LayoutAdmin>
+          }
+        />
+        <Route
+          path="/add-film"
+          element={
+            <LayoutAdmin>
+              <AddFilm />
+            </LayoutAdmin>
+          }
+        />
+        <Route
+          path="/add-episode"
+          element={
+            <LayoutAdmin>
+              <AddEpisode />
+            </LayoutAdmin>
+          }
+        />
 
-      <Route path='/list-film' element={
-        <Layout>
-          <ListFilm />
-        </Layout>
-      } />
-      <Route path='/add-film' element={
-        <Layout>
-          <AddFilm />
-        </Layout>
-      } />
-      <Route path='/add-episode' element={
-        <Layout>
-          <AddEpisode />
-        </Layout>
-      } />
-  </Routes>
-  </BrowserRouter>
+        <Route
+          path="*"
+          element={
+            <Layout>
+              <Notfound />
+            </Layout>
+          }
+        />
+
+      </Routes>
+    </BrowserRouter>
   );
 }
 
