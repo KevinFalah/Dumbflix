@@ -91,9 +91,6 @@ function Navbar() {
                   <Dropdown.Item as={Link} to='/payment'>
                    <FaMoneyCheckAlt className="text-danger ms-2"/> Pay
                   </Dropdown.Item>
-                  <Dropdown.Item as={Link} to='/list-film'>
-                   <FaVideo className="text-danger ms-2"/> Film
-                  </Dropdown.Item>
                   <Dropdown.Divider className="bg-light dropDivid"  />
                   <Dropdown.Item href="#" onClick={handleLogout}>
                   <FaSignOutAlt className="text-danger ms-2" />   Logout

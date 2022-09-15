@@ -72,7 +72,7 @@ function NavbarAdmin() {
             </li>
           </ul> */}
           <div className="flex-grow-1 d-none d-sm-block">
-            <Link to='/'>
+            <Link to='/admin'>
               <img src={Logo} alt="Dumbflix" />
             </Link>
           </div>
@@ -85,13 +85,6 @@ function NavbarAdmin() {
                 </Dropdown.Toggle>
               
                 <Dropdown.Menu variant="dark">
-                    {/* <Dropdown.Item as={Link} to='/profile'>
-                    <FaUser className="text-danger ms-2" /> 
-                    Profile
-                    </Dropdown.Item>
-                  <Dropdown.Item as={Link} to='/payment'>
-                   <FaMoneyCheckAlt className="text-danger ms-2"/> Pay
-                  </Dropdown.Item> */}
                   <Dropdown.Item as={Link} to='/list-film'>
                    <FaVideo className="text-danger ms-2"/> Film
                   </Dropdown.Item>
